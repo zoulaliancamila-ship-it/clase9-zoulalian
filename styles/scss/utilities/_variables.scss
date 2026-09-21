@@ -1,0 +1,33 @@
+@use 'sass:color';
+
+$color-texto: #2E2A45;
+$color-soft-pink: #EC709A;
+$color-butter-yellow: #F5E8AA;
+$color-celeste: #A9DEF9;
+$color-fondo: #FFFDF7;
+$color-fondo-tarjeta: #FFFFFF;
+
+$color-primario: $color-texto;
+$color-secundario: $color-soft-pink;
+$color-secundario-suave: $color-butter-yellow;
+$color-acento: $color-soft-pink;
+
+$color-soft-pink-accesible: color.mix($color-soft-pink, $color-texto, 65%);
+$color-celeste-accesible: color.mix($color-celeste, $color-texto, 40%);
+
+$sombra-overlay: rgba($color-texto, 0.75);
+$sombra-hover: rgba($color-texto, 0.15);
+
+$fuente-titulos: 'Fraunces', serif;
+$fuente-principal: 'Work Sans', sans-serif;
+
+$radio-sm: 4px;
+$radio-md: 6px;
+$radio-lg: 12px;
+$radio-xl: 16px;
+
+$transicion-rapida: 0.15s ease;
+$transicion-base: 0.2s ease;
+$transicion-3d: 0.35s ease;
+
+$bp-desktop: 1024px;

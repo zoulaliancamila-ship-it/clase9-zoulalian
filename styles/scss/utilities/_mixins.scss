@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+@mixin respond-desktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin focus-ring($color: $color-celeste) {
+  outline: none;
+  box-shadow: 0 0 0 3px $color;
+}
+
+@mixin hover-lift {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px $sombra-hover;
+  border-color: $color-celeste;
+}
+
+@mixin hover-tilt-3d {
+  transform: perspective(900px) translateY(-10px) translateZ(15px) rotateX(6deg) rotateY(6deg) scale(1.03);
+  box-shadow: 0 22px 32px $sombra-hover;
+  border-color: $color-celeste;
+}

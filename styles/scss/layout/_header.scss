@@ -1,0 +1,13 @@
+@use '../utilities/variables' as *;
+
+.navbar-chinchulin {
+  background-color: $color-primario;
+  padding: 1rem 0;
+
+  .navbar-brand {
+    font-family: $fuente-titulos;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: $color-fondo;
+  }
+}

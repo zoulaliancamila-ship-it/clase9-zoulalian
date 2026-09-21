@@ -1,0 +1,63 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.grilla-servicios {
+  display: grid;
+  grid-template-areas:
+    "landing"
+    "mantenimiento"
+    "branding";
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+
+  .tarjeta-landing { grid-area: landing; }
+  .tarjeta-mantenimiento { grid-area: mantenimiento; }
+  .tarjeta-branding { grid-area: branding; }
+
+  @include respond-desktop {
+    grid-template-areas: "landing mantenimiento branding";
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+%tarjeta-superficie {
+  background-color: $color-fondo-tarjeta;
+  border: 2px solid $color-secundario;
+}
+
+.tarjeta {
+  @extend %tarjeta-superficie;
+  border-radius: $radio-md;
+  padding: 1.5rem;
+  transition: transform $transicion-base, box-shadow $transicion-base, border-color $transicion-base;
+
+  &:hover {
+    @include hover-lift;
+  }
+}
+
+.tarjeta-titulo {
+  color: $color-primario;
+}
+
+.tarjeta-proyecto {
+  @extend %tarjeta-superficie;
+  border-radius: $radio-lg;
+  transform-origin: bottom center;
+  transition: transform $transicion-3d, box-shadow $transicion-3d, border-color $transicion-3d;
+
+  &:hover,
+  &:focus-within {
+    @include hover-tilt-3d;
+  }
+
+  &:active {
+    transform: perspective(900px) translateY(-4px) translateZ(6px) rotateX(2deg) rotateY(2deg);
+  }
+
+  .card-title {
+    font-family: $fuente-titulos;
+    color: $color-primario;
+  }
+}

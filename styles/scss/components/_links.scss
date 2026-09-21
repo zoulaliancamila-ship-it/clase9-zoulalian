@@ -1,0 +1,17 @@
+@use '../utilities/variables' as *;
+
+.enlace {
+  color: $color-primario;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color $transicion-base;
+
+  &:hover,
+  &:focus {
+    color: $color-celeste-accesible;
+  }
+
+  &:active {
+    color: $color-soft-pink-accesible;
+  }
+}

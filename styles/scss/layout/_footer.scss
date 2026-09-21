@@ -1,0 +1,9 @@
+@use '../utilities/variables' as *;
+
+.sitio-footer {
+  background-color: $color-primario;
+  color: $color-fondo;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}

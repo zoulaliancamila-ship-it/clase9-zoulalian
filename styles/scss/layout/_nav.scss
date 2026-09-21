@@ -1,0 +1,37 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.navbar-chinchulin {
+  .nav-link {
+    color: $color-fondo;
+    font-weight: 400;
+    transition: color $transicion-base;
+
+    &:hover,
+    &:focus {
+      color: $color-celeste;
+    }
+
+    &:active {
+      color: $color-soft-pink;
+    }
+
+    &.active {
+      color: $color-soft-pink;
+      font-weight: 600;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: $color-fondo;
+    transition: box-shadow $transicion-base, transform $transicion-rapida;
+
+    &:focus {
+      @include focus-ring;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
